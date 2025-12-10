@@ -75,6 +75,10 @@ body {
   margin-top: 10px;
 }
 
+.text {
+  text-align: center;
+}
+
 .next-btn {
   padding: 10px 16px;
   border-radius: 10px;

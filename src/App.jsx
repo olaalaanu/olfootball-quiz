@@ -31,7 +31,18 @@ export default function App() {
   const timerRef = useRef(null);
   const runningRef = useRef(false);
 
-  const categories = ["Players", "Clubs", "World Cup", "Stadiums", "Chelsea"];
+  const categories = [
+    "Players",
+    "Clubs",
+    "World Cup",
+    "Stadiums",
+    "Chelsea",
+    "Barcelona",
+    "Arsenal",
+    "Liverpool",
+    "Manchester City",
+    "Manchester United",
+  ];
 
   function startQuiz() {
     const filtered = questions.filter((q) => q.category === category);
@@ -138,7 +149,9 @@ export default function App() {
       {/* CATEGORY */}
       {step === "category" && (
         <div className="panel fade-in">
-          <h2>Select a Category</h2>
+          <h2 className="text">
+            Select Clubs, League, Countries or Competition
+          </h2>
           <div className="menu-row">
             {categories.map((cat) => (
               <button
@@ -200,7 +213,9 @@ export default function App() {
       )}
 
       <footer className="app-footer">
-        <small>Built with React + Vite • Good luck — and have fun!</small>
+        <small>
+          Built with React + Vite by Lateef Ismaila Good luck — and have fun!
+        </small>
       </footer>
     </div>
   );
